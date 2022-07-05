@@ -1,0 +1,642 @@
+$icomoon-font-family: "worksafebeta-icons" !default;
+$icomoon-rp-font-family: "worksafe-recovery-portal-icons" !default;
+$font-path: "./fonts" !default;
+
+@font-face {
+  font-family: "VIC-Regular";
+  src: url('./fonts/WEBFONT/Regular/VIC-Regular.woff2') format("woff2"),
+    url('./fonts/WEBFONT/Regular/VIC-Regular.woff') format("woff");
+  font-weight: 400;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "VIC-Regular";
+  src: url('./fonts/WEBFONT/Medium/VIC-Medium.woff2') format("woff2"),
+    url('./fonts/WEBFONT/Medium/VIC-Medium.woff') format("woff");
+  font-display: fallback;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "VIC-Regular";
+  src: url('./fonts/WEBFONT/SemiBold/VIC-SemiBold.woff2') format("woff2"),
+    url('./fonts/WEBFONT/SemiBold/VIC-SemiBold.woff') format("woff");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VIC-Regular";
+  src: url('./fonts/WEBFONT/Bold/VIC-Bold.woff2') format("woff2"), 
+  url('./fonts/WEBFONT/Bold/VIC-Bold.woff') format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+$icon-star-outline: "\e926";
+$icon-star: "\e927";
+$icon-certificate-capacity: "\e91d";
+$icon-contact: "\e91e";
+$icon-location-marker: "\e91f";
+$icon-payments: "\e920";
+$icon-person-waving: "\e921";
+$icon-thumbs-down: "\e922";
+$icon-thumbs-up: "\e923";
+$icon-treatments: "\e924";
+$icon-understand: "\e925";
+$icon-gym: "\e900";
+$icon-patient: "\e901";
+$icon-psychology: "\e916";
+$icon-Vector-3: "\e917";
+$icon-broken-arm: "\e918";
+$icon-mop-and-bucket: "\e919";
+$icon-goals: "\e91b";
+$icon-health-list: "\e91c";
+$icon-menu: "\e914";
+$icon-External-link: "\e902";
+$icon-admin-and-support-services: "\e903";
+$icon-ambulance: "\e904";
+$icon-arrow-right: "\e905";
+$icon-chevron-down: "\e906";
+$icon-chevron-left: "\e907";
+$icon-chevron-right: "\e908";
+$icon-chevron-up: "\e909";
+$icon-External-link1: "\e90a";
+$icon-find: "\e90b";
+$icon-gettreatment: "\e90c";
+$icon-info: "\e90d";
+$icon-mri: "\e90e";
+$icon-pod: "\e90f";
+$icon-resources: "\e910";
+$icon-returntowork: "\e911";
+$icon-support: "\e912";
+$icon-tick: "\e913";
+$icon-totop-desktop: "\e915";
+$icon-x-close: "\e91a";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$font-path}/#{$icomoon-font-family}.ttf?jknjns") format("truetype"),
+    url("#{$font-path}/#{$icomoon-font-family}.woff?jknjns") format("woff"),
+    url("#{$font-path}/#{$icomoon-font-family}.svg?jknjns##{$icomoon-font-family}") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "#{$icomoon-rp-font-family}";
+  src: url("#{$font-path}/#{$icomoon-rp-font-family}.ttf?ddql21") format("truetype"),
+    url("#{$font-path}/#{$icomoon-rp-font-family}.woff?ddql21") format("woff"),
+    url("#{$font-path}/#{$icomoon-rp-font-family}.svg?ddql21#worksafe-recovery-portal-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@mixin icomoon-icons {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin icomoon-rp-icons {
+  font-family: "#{$icomoon-rp-font-family}" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-certificate-capacity {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-certificate-capacity; 
+  }
+}
+.icon-contact {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-contact; 
+  }
+}
+.icon-location-marker {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-location-marker; 
+  }
+}
+.icon-payments {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-payments; 
+  }
+}
+.icon-person-waving {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-person-waving; 
+  }
+}
+.icon-thumbs-down {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-thumbs-down; 
+  }
+}
+.icon-thumbs-up {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-thumbs-up; 
+  }
+}
+.icon-treatments {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-treatments; 
+  }
+}
+.icon-understand {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-understand; 
+  }
+}
+.icon-gym {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-gym; 
+  }
+}
+.icon-patient {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-patient; 
+  }
+}
+.icon-psychology {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-psychology; 
+  }
+}
+.icon-Vector-3 {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-Vector-3; 
+  }
+}
+.icon-broken-arm {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-broken-arm; 
+  }
+}
+.icon-mop-and-bucket {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-mop-and-bucket; 
+  }
+}
+.icon-goals {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-goals; 
+  }
+}
+.icon-health-list {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-health-list; 
+  }
+}
+.icon-menu {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-menu; 
+  }
+}
+.icon-External-link {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-External-link; 
+  }
+}
+.icon-admin-and-support-services {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-admin-and-support-services; 
+  }
+}
+.icon-ambulance {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-ambulance; 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-arrow-right; 
+  }
+}
+.icon-chevron-down {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-chevron-down; 
+  }
+}
+.icon-chevron-left {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-chevron-left; 
+  }
+}
+.icon-chevron-right {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-chevron-right; 
+  }
+}
+.icon-chevron-up {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-chevron-up; 
+  }
+}
+.icon-External-link1 {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-External-link1; 
+  }
+}
+.icon-find {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-find; 
+  }
+}
+.icon-gettreatment {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-gettreatment; 
+  }
+}
+.icon-info {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-info; 
+  }
+}
+.icon-mri {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-mri; 
+  }
+}
+.icon-pod {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-pod; 
+  }
+}
+.icon-resources {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-resources; 
+  }
+}
+.icon-returntowork {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-returntowork; 
+  }
+}
+.icon-support {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-support; 
+  }
+}
+.icon-tick {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-tick; 
+  }
+}
+.icon-totop-desktop {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-totop-desktop; 
+  }
+}
+.icon-x-close {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-x-close; 
+  }
+}
+.icon-star-outline {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-star-outline;
+  }
+}
+.icon-star {
+  &:before {
+    @include icomoon-icons;
+    content: $icon-star;
+  }
+}
+
+.ws-recoveryicon_calender:before {
+  @include icomoon-rp-icons;
+  content: "\e905";
+}
+.ws-recoveryicon_profile:before {
+  @include icomoon-rp-icons;
+  content: "\e906";
+}
+.ws-recoveryicon_person:before {
+  @include icomoon-rp-icons;
+  content: "\e907";
+}
+.ws-recoveryicon_minus:before {
+  @include icomoon-rp-icons;
+  content: "\e908";
+}
+.ws-recoveryicon_chevron_up:before {
+  @include icomoon-rp-icons;
+  content: "\e909";
+}
+.ws-recoveryicon_chevron_down:before {
+  @include icomoon-rp-icons;
+  content: "\e90a";
+}
+.ws-recoveryicon_travel:before {
+  @include icomoon-rp-icons;
+  content: "\e90b";
+}
+.ws-recoveryicon_fill_tick:before {
+  @include icomoon-rp-icons;
+  content: "\e90d";
+}
+.ws-recoveryicon_upload:before {
+  @include icomoon-rp-icons;
+  content: "\e90e";
+}
+.ws-recoveryicon_understanding_worksafe:before {
+  @include icomoon-rp-icons;
+  content: "\e90f";
+}
+.ws-recoveryicon_give_feedback:before {
+  @include icomoon-rp-icons;
+  content: "\e910";
+}
+.ws-recoveryicon_hand_dollars:before {
+  @include icomoon-rp-icons;
+  content: "\e911";
+}
+.ws-recoveryicon_x_close_rounded:before {
+  @include icomoon-rp-icons;
+  content: "\e912";
+}
+.ws-recoveryicon_x_close_filled:before {
+  @include icomoon-rp-icons;
+  content: "\e913";
+}
+.ws-recoveryicon_treatment_services:before {
+  @include icomoon-rp-icons;
+  content: "\e914";
+}
+.ws-recoveryicon_tick_rounded_thin:before {
+  @include icomoon-rp-icons;
+  content: "\e915";
+}
+.ws-recoveryicon_tick_rounded_thick:before {
+  @include icomoon-rp-icons;
+  content: "\e916";
+}
+.ws-recoveryicon_thumbs_up:before {
+  @include icomoon-rp-icons;
+  content: "\e917";
+}
+.ws-recoveryicon_thumbs_down:before {
+  @include icomoon-rp-icons;
+  content: "\e918";
+}
+.ws-recoveryicon_supports:before {
+  @include icomoon-rp-icons;
+  content: "\e919";
+}
+.ws-recoveryicon_self_service:before {
+  @include icomoon-rp-icons;
+  content: "\e91a";
+}
+.ws-recoveryicon_rights:before {
+  @include icomoon-rp-icons;
+  content: "\e91b";
+}
+.ws-recoveryicon_request_services:before {
+  @include icomoon-rp-icons;
+  content: "\e91c";
+}
+.ws-recoveryicon_recovery_plan:before {
+  @include icomoon-rp-icons;
+  content: "\e91d";
+}
+.ws-recoveryicon_portal:before {
+  @include icomoon-rp-icons;
+  content: "\e91e";
+}
+.ws-recoveryicon_plus_square:before {
+  @include icomoon-rp-icons;
+  content: "\e91f";
+}
+.ws-recoveryicon_plus_rounded:before {
+  @include icomoon-rp-icons;
+  content: "\e920";
+}
+.ws-recoveryicon_play:before {
+  @include icomoon-rp-icons;
+  content: "\e921";
+}
+.ws-recoveryicon_phone:before {
+  @include icomoon-rp-icons;
+  content: "\e922";
+}
+.ws-recoveryicon_pdf:before {
+  @include icomoon-rp-icons;
+  content: "\e923";
+}
+.ws-recoveryicon_location_marker:before {
+  @include icomoon-rp-icons;
+  content: "\e924";
+}
+.ws-recoveryicon_info:before {
+  @include icomoon-rp-icons;
+  content: "\e925";
+}
+.ws-recoveryicon_home_btn:before {
+  @include icomoon-rp-icons;
+  content: "\e926";
+}
+.ws-recoveryicon_help:before {
+  @include icomoon-rp-icons;
+  content: "\e927";
+}
+.ws-recoveryicon_hamburger_menu:before {
+  @include icomoon-rp-icons;
+  content: "\e928";
+}
+.ws-recoveryicon_filled_circle_close:before {
+  @include icomoon-rp-icons;
+  content: "\e929";
+}
+.ws-recoveryicon_feedback_thumb:before {
+  @include icomoon-rp-icons;
+  content: "\e92a";
+}
+.ws-recoveryicon_face_very_happy:before {
+  @include icomoon-rp-icons;
+  content: "\e92b";
+}
+.ws-recoveryicon_face_unhappy:before {
+  @include icomoon-rp-icons;
+  content: "\e92c";
+}
+.ws-recoveryicon_face_sad:before {
+  @include icomoon-rp-icons;
+  content: "\e92d";
+}
+.ws-recoveryicon_face_ok:before {
+  @include icomoon-rp-icons;
+  content: "\e92e";
+}
+.ws-recoveryicon_face_happy:before {
+  @include icomoon-rp-icons;
+  content: "\e92f";
+}
+.ws-recoveryicon_edit:before {
+  @include icomoon-rp-icons;
+  content: "\e930";
+}
+.ws-recoveryicon_document:before {
+  @include icomoon-rp-icons;
+  content: "\e931";
+}
+.ws-recoveryicon_contact_supports:before {
+  @include icomoon-rp-icons;
+  content: "\e932";
+}
+.ws-recoveryicon_contact_persons:before {
+  @include icomoon-rp-icons;
+  content: "\e933";
+}
+.ws-recoveryicon_chevron_left:before {
+  @include icomoon-rp-icons;
+  content: "\e934";
+}
+.ws-recoveryicon_chevron_right:before {
+  @include icomoon-rp-icons;
+  content: "\e935";
+}
+.ws-recoveryicon_checklist:before {
+  @include icomoon-rp-icons;
+  content: "\e936";
+}
+.ws-recoveryicon_chat_send:before {
+  @include icomoon-rp-icons;
+  content: "\e937";
+}
+.ws-recoveryicon_avator:before {
+  @include icomoon-rp-icons;
+  content: "\e938";
+}
+.ws-recoveryicon_attachment:before {
+  @include icomoon-rp-icons;
+  content: "\e939";
+}
+.ws-recoveryicon_arrow_left:before {
+  @include icomoon-rp-icons;
+  content: "\e93a";
+}
+.ws-recoveryicon_arrow_right:before {
+  @include icomoon-rp-icons;
+  content: "\e93b";
+}
+.ws-recoveryicon_arrow_fill_right:before {
+  @include icomoon-rp-icons;
+  content: "\e93c";
+}
+.ws-recoveryicon_arrow_fill_left:before {
+  @include icomoon-rp-icons;
+  content: "\e93d";
+}
+.ws-recoveryicon_about_worksafe:before {
+  @include icomoon-rp-icons;
+  content: "\e93e";
+}
+.ws-recoveryicon_alert:before {
+  @include icomoon-rp-icons;
+  content: "\e93f";
+}
+.ws-recoveryicon_questions:before {
+  @include icomoon-rp-icons;
+  content: "\e940";
+}
+.ws-recoveryicon_tick_in_circle:before {
+  @include icomoon-rp-icons;
+  content: "\e941";
+}
+/*
+.ws-recoveryicon_mail:before {
+  content: "\e942";
+}
+*/
+.ws-recoveryicon_search:before {
+  @include icomoon-rp-icons;
+  content: "\e943";
+}
+.ws-recoveryicon_person_top:before {
+  @include icomoon-rp-icons;
+  content: "\e900";
+}
+.ws-recoveryicon_person_positive:before {
+  @include icomoon-rp-icons;
+  content: "\e901";
+}
+.ws-recoveryicon_people_shoulder:before {
+  @include icomoon-rp-icons;
+  content: "\e902";
+}
+.ws-recoveryicon_messages:before {
+  @include icomoon-rp-icons;
+  content: "\e903";
+}
+.ws-recoveryicon_health_bubble:before {
+  @include icomoon-rp-icons;
+  content: "\e904";
+}
+.ws-recoveryicon_radio_selected:before {
+  @include icomoon-rp-icons;
+  content: "\e90c";
+}
+.ws-recoveryicon_radio_default:before {
+  @include icomoon-rp-icons;
+  content: "\e944";
+}

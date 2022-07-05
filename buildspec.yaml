@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+    install:
+        commands:
+            - npm i npm@latest -g
+    pre_build:
+        on-failure: ABORT
+        commands:
+            - echo Pre_build Phase
+            - npm install
+    build:
+        on-failure: ABORT
+        commands:
+            - echo Build Phase
+            - npm run build
+artifacts:
+    files:
+        - '**/*'
+    base-directory: 'dist'

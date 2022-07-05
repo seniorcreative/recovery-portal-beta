@@ -1,0 +1,186 @@
+{
+    "language": "en-au",
+    "navigation": [
+        {
+           "name": "home",
+           "path": "/home",
+           "params": {},
+           "title": "Home",
+           "subnavigation": [],
+           "visibleInHeader": true,
+           "visibleInFooter": true
+        },
+        {
+           "name": "recovery",
+           "path": "/recovery/get-treatment",
+           "params": {},
+           "title": "Recovery",
+           "subnavigation": [
+            {
+                "name": "get-treatment",
+                "path": "/recovery/get-treatment",
+                "params": {},
+                "title": "Get Treatment",
+                "iconClass": "icon-gettreatment",
+                "disabled": false,
+                "visible": true
+             },
+            {
+                "name": "setup-supports",
+                "path": "/recovery/setup-supports",
+                "params": {},
+                "title": "Setup supports",
+                "iconClass": "icon-support",
+                "disabled": true,
+                "visible": false
+            },
+            {
+                "name": "setting-goals",
+                "path": "/recovery/setting-goals",
+                "params": {},
+                "title": "Setting goals",
+                "iconClass": "icon-Vector-7",
+                "disabled": true,
+                "visible": false
+             },
+            {
+                "name": "return-to-work",
+                "path": "/recovery/return-to-work",
+                "params": {},
+                "title": "Return to work & life",
+                "iconClass": "icon-returntowork",
+                "disabled": true,
+                "visible": false
+             },
+             
+            {
+                "name": "recovery-resources",
+                "path": "/recovery/recovery-resources",
+                "params": {},
+                "title": "Recovery resources",
+                "iconClass": "icon-resources",
+                "disabled": false,
+                "visible": true
+             }
+           ],
+           "visibleInHeader": true,
+           "visibleInFooter": true
+        },
+        {
+           "name": "help",
+           "path": "/help",
+           "params": {},
+           "title": "Help Centre",
+           "subnavigation": [],
+           "visibleInHeader": true,
+           "visibleInFooter": true
+        },
+        {
+           "name": "provider",
+           "path": "/provider",
+           "params": {},
+           "title": "Find a Provider",
+           "subnavigation": [],
+           "visibleInHeader": false,
+           "visibleInFooter": false
+        },
+        {
+           "name": "privacy",
+           "path": "/privacy",
+           "params": {},
+           "title": "Privacy",
+           "subnavigation": [],
+           "visibleInHeader": false,
+           "visibleInFooter": true
+        }
+    ],
+    "pages": {
+        "help": {
+            "content": {
+                "title": "Welcome to WorkSafe's Help Centre",
+                "content": ""
+            }
+        },
+        "privacy": {
+            "content": {
+                "title": "Privacy policy",
+                "content": "TBC"
+            }
+        },
+        "footer": {
+            "acknowledgement": "<p class=\"is-size-6\">WorkSafe Victoria acknowledges Aboriginal and Torres Strait Islander people as the Traditional Custodians of the land and acknowledges and pays respect to their Elders, past and present.</p><p class=\"is-size-6 mt-4\">WorkSafe Victoria is committed to safe and inclusive work places, policies and services for people of LGBTIQ communities and their families.</p>"
+        }
+    },
+    "links": [
+        {
+            "title": "Physical activity",
+            "subtitle": "Setting yourself goals",
+            "url": "https://www.betterhealth.vic.gov.au/health/healthyliving/physical-activity-setting-yourself-goals",
+            "img": "betterhealth"
+        },
+        {
+            "title": "Workplace safety",
+            "subtitle": "Overuse injuries",
+            "url": "https://www.betterhealth.vic.gov.au/health/healthyliving/workplace-safety-overuse-injuries",
+            "img": "betterhealth"
+        },
+        {
+            "title": "Returning to work",
+            "subtitle": "Returning to work after major trauma",
+            "url": "https://www.betterhealth.vic.gov.au/health/servicesandsupport/returning-to-work-after-major-trauma",
+            "img": "betterhealth"
+        },
+        {
+            "title": "Sleep explained",
+            "subtitle": "",
+            "url": "https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/sleep",
+            "img": "betterhealth"
+        },
+        {
+            "title": "Preparing for a health or medical appointment",
+            "subtitle": "",
+            "url": "https://www.betterhealth.vic.gov.au/health/servicesandsupport/preparing-for-a-health-or-medical-appointment",
+            "img": "betterhealth"
+        }
+    ],
+    "dataCategories": {
+        "Workers": {
+            "Guided": {
+                "Understanding WorkCover": {},
+                "Payments": {
+                    "Weekly payments": {},
+                    "Types of compensation": {}
+                },
+                "Treatment and support": {
+                    "Treatment and health services": {},
+                    "Other support services": {},
+                    "Recovering from an injury": {}
+                },
+                "Recovery and return to work": {
+                    "Recovery": {},
+                    "Return to work": {}
+                },
+                "Certificate of capacity": {},
+                "Rights and obligations": {
+                    "My rights and obligations": {},
+                    "Rights and obligations of others": {}
+                },
+                "Agent support": {}
+            },
+            "Supported": {},
+            "Assisted": {}
+        },
+        "Treaters": {},
+        "Employers": {}
+    },
+    "defaults": {
+        "contentFilterData": {
+            "iwFirstName": "",
+            "agentName": "your WorkSafe agent",
+            "agentEmail": "agent@insurer.net.au",
+            "agentContactNumber": "1800 000 111",
+            "statutoryMax": 985,
+            "wsEmail": "innovationsupport@worksafe.vic.gov.au"
+        }
+    }
+}

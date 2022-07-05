@@ -1,0 +1,495 @@
+$footer-background-color: #424b78;
+$box-background-color: #e6eaf2;
+$green: aquamarine; /*#27ae60; */ /*#219653;*/
+$blue: #424b78;
+$yellow: #fdb813;
+$cyan: rgba(#6fcf97, 14%);
+$hyper: #2f80ed;
+$color-brighter: #495ebd;
+$grey-darker: #828282;
+$grey: #4f4f4f;
+$size3: 1.75rem;
+
+@import "./_fonts.scss";
+
+#app {
+  font-family: VIC-Regular, Arial, sans-serif;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
+  text-rendering: optimizeLegibility !important;
+  color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.has-text-weight-bold {
+  font-family: VIC-Regular, Arial, sans-serif;
+  font-weight: 600 !important;
+  font-style: normal;
+}
+
+body, button, input, optgroup, select, textarea {
+  font-family: VIC-Regular, Arial, sans-serif;
+}
+
+.is-absolute {
+  position: absolute;
+}
+
+.is-green {
+  color: aquamarine;
+}
+
+strong {
+  color: #000000;
+}
+
+a {
+  word-break: break-word;
+  .content & {
+    color: $hyper;
+    text-decoration: underline;
+  }
+}
+
+section {
+  padding: 0.5em 0;
+  @media (min-width: 767px) {
+    min-height: calc(100vh - 100px);
+    padding: 2em 0;
+  }
+}
+
+i {
+  font-size: 1.5rem;
+}
+
+.app-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0 0 0 165px;
+  width: 50%;
+  display: flex;
+  height: 72px;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: left;
+  font-size: 1.2rem;
+  @media (max-width: 1023px) {
+    text-align: center;
+    width: calc(100% - 186px);
+    height: 62px;
+    font-size: 18px;
+    left: 102px;
+    padding: 0;
+  }
+}
+
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 6px;
+  height: 84px;
+  z-index: 1;
+  @media (max-width: 1023px) {
+    height: 62px;
+    padding: 0;
+  }
+}
+
+.navbar {
+  @media (min-width: 1024px) {
+    border-radius: 3px;
+    top: 6px !important;
+    left: 6px !important;
+    width: calc(100% - 12px);
+  }
+}
+
+.nav-wrapper {
+  z-index: 10;
+}
+
+.navbar-end {
+  padding-right: 1rem;
+}
+.navbar-burger {
+  height: 72px;
+  transform: scale(1.6);
+  position: relative;
+  left: -6px;
+  @media (max-width: 1023px) {
+    height: 62px;
+  }
+  @media (min-width: 1024px) {
+    display: block !important;
+    position: fixed;
+    right: 18px;
+    z-index: 1;
+  }
+}
+.navbar-burger:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.navbar-brand .navbar-item {
+  cursor: pointer;
+  margin: 0 1rem;
+  min-height: 72px;
+  z-index: 1;
+  @media (max-width: 1023px) {
+    margin-left: 0;
+    min-height: 62px;
+  }
+}
+.navbar-item img {
+  height: 55px;
+  max-height: 55px;
+  align-self: flex-start;
+  @media (max-width: 1023px) {
+    height: 38px;
+    max-height: 38px;
+  }
+}
+
+.navbar.is-link .navbar-brand > a.navbar-item:focus,
+.navbar.is-link .navbar-brand > a.navbar-item:hover,
+.navbar.is-link .navbar-brand > a.navbar-item.is-active,
+.navbar.is-link .navbar-brand .navbar-link:focus,
+.navbar.is-link .navbar-brand .navbar-link:hover,
+.navbar.is-link .navbar-brand .navbar-link.is-active {
+  background-color: inherit;
+}
+
+.navbar-menu--full-height {
+  @media (max-width: 1023px) {
+    height: 100vh;
+    background-color: #424b78;
+  }
+}
+
+.navbar-end .navbar-item {
+  @media (max-width: 1023px) {
+    &:first-of-type {
+      border-top: 2px solid white;
+    }
+    border-bottom: 2px solid white;
+    color: #fff;
+    &:hover,
+    :focus {
+      background: #000;
+      color: #fdb813 !important;
+    }
+  }
+}
+
+.button {
+  height: auto !important;
+  border-radius: 12px;
+}
+
+.icon-checkmark {
+  font-size: 1.5rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-position: inside;
+}
+
+.page-divider {
+  border-top: 4px solid #f2f2f2;
+}
+
+.content-page {
+  @media screen and (max-width: 1024px) {
+    margin-top: 40px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  margin-top: 80px;
+}
+
+.has-text-brighter {
+  color: $color-brighter;
+}
+
+.icon-flipped {
+  display: inline-block;
+  position: relative;
+  top: -3px;
+  left: 3px;
+  transform: rotate(180deg);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+.listitems {
+  list-style-position: inside;
+}
+
+.listitems li {
+  background-color: #e6e2da;
+  margin: 8px 0px;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.is-size-2-desktop {
+  font-size: 44px !important;
+  line-height: 1;
+  @media (max-width: 1025px) {
+    font-size: 32px !important;
+  }
+}
+
+.is-size-3-desktop {
+  font-size: 28px !important;
+}
+
+.start-padding {
+  @media (max-width: 1023px) {
+    padding-top: 24px;
+  }
+  @media (min-width: 1023px) {
+    padding-top: 48px;
+  }
+}
+
+ol {
+  list-style-position: inside;
+}
+
+ol::marker {
+  font-weight: bold;
+}
+
+ol li {
+  background-color: #e6e2da;
+  padding: 16px 32px;
+  width: 100%;
+  margin: 12px 0;
+  border-radius: 12px;
+}
+
+/* Bad idea
+----
+// li p {
+//   display: inline !important;
+// }
+*/
+
+@media screen and (min-width: 1408px) {
+  .container:not(.is-max-desktop):not(.is-max-widescreen) {
+    max-width: 1152px !important;
+  }
+}
+
+/* Content page overrides */
+
+.container-content {
+  max-width: 860px !important;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 24px !important;
+    margin-bottom: 18px;
+    color: $blue;
+  }
+
+  h2 {
+    font-size: 18px !important;
+    margin-bottom: 12px;
+  }
+
+  ol {
+    margin: 48px 0;
+  }
+
+  ul {
+    list-style: initial;
+    margin: 20px 0 20px 20px;
+  }
+
+  p {
+    margin-bottom: 24px;
+  }
+}
+
+//CSS ADDED HERE FOR MAP PAGE SUPPORT
+
+.max-width {
+  margin: auto;
+  width: 90vw;
+}
+.map-control {
+  .select {
+    select {
+      width: 100%;
+    } 
+    width: 100%;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #geocoder {
+    z-index: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #geocoder .mapboxgl-ctrl-geocoder {
+    width: 100%;
+    font-size: 15px;
+    line-height: 20px;
+    max-width: 100%;
+    .mapboxgl-ctrl-geocoder--input {
+      border-color: #dbdbdb;
+      height: 2.5em;
+    }
+  }
+  .map-sidebar-item-container {
+    position: sticky;
+
+    &-scrollarea {
+      overflow-y: scroll;
+      transition: all 0.5s ease;
+      @media (max-width: 767px) {
+        height: 24vh;
+      }
+      @media (min-width: 768px) {
+        height: calc(100vh - 384px);
+        min-height: 500px;
+      }
+    }
+    ul {
+      li {
+        transition: all 0.3s ease;
+        background-color: transparent;
+        border-left: 2px solid transparent;
+        padding-left: 0;
+        cursor: pointer;
+        &.active, &:hover {
+          background-color: lighten($blue, 60%);
+          border-left: 3px solid $blue;
+          padding-left: 10px;
+          p.is-size-5 {
+            transition: all 0.3s ease;
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+  .mapbox-gl-geocoder--no-results {
+    font-family: VIC-regular, Arial, sans-serif !important;
+  }
+  .mapboxgl-popup-content {
+    padding: 1.25em !important; /* Important because need to override inside iframe / canvas */
+    border-radius: 10px !important; /* Important because need to override inside iframe / canvas */
+    small {
+      font-family: VIC-Regular, Arial, sans-serif;
+    }
+  }
+  .mapboxgl-ctrl-geocoder--suggestion {
+    font-family: VIC-Regular, Arial, sans-serif;
+    &-title {
+      font-family: VIC-SemiBold, Arial, sans-serif;
+    }
+  }
+  .mapboxgl-popup-close-button {
+    font-size: 1.75em !important; /* Important because need to override inside iframe / canvas */
+    top: 5px !important;
+    right: 5px !important;
+  }
+ .mapboxgl-ctrl-geocoder--button {
+    right: 8px !important;
+    top: 5px !important;
+    background: white !important;
+    padding: 5px !important;
+    border-radius: 5px !important;
+    &:hover {
+      background: white !important;
+      transform: scale(1.2) !important;
+    }
+  }
+  .mapboxgl-ctrl-geocoder--icon-loading {
+    background: white !important;
+    right: 10px !important;
+    top: 2px !important;
+  }
+  .mapboxgl-ctrl-geocoder--icon-close {
+    margin-top: 0 !important;
+    margin-right: 0 !important;
+  }
+  .mapbox-gl-geocoder--no-results {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+}
+
+.panel-h-200 {
+    @media (min-width: 768px) {
+      min-height: 200px !important;
+    }
+}
+
+
+.panel-h-250 {
+    @media (min-width: 768px) {
+      min-height: 250px !important;
+    }
+}
+
+.panel-h-300 {
+    @media (min-width: 768px) {
+      min-height: 300px !important;
+    }
+}
+
+.panel-h-400 {
+    @media (min-width: 768px) {
+      min-height: 400px !important;
+    }
+}
+
+.card {
+  @media (max-width: 599px) {
+    min-width: calc(75% - 0.5em);
+    max-width: calc(75% - 0.5em);
+  }
+  @media (min-width: 600px) {
+    min-width: calc(50% - 0.5em);
+    max-width: calc(50% - 0.5em);
+  }
+  @media (min-width: 768px) {
+    min-width: 345px;
+    max-width: 345px;
+    /*:first-of-type {
+      margin-left: calc(((100% - 1152px)/2) + 6rem);
+    }*/
+  }
+}

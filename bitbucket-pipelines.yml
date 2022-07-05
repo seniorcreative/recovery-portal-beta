@@ -1,0 +1,93 @@
+# This is an example Starter pipeline configuration
+# Use a skeleton to build, test and deploy using manual and parallel steps
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: node:14-alpine
+pipelines:
+  branches:
+    master:
+       - step:
+          name: 'Setup'
+          caches:
+            - node
+          script:
+            - echo "Beginning Install..."
+            - npm install
+       - step:
+          name: 'Test'
+          caches:
+            - node
+          script:
+            - echo "Beginning Install..."
+            - npm install
+            # - echo "Beginning Tests...."
+            # - npm test
+       - step:
+          name: 'Security scan...'
+          script:
+            - echo "Your security scan goes here..."
+       - step:
+          name: 'Deploy to S3 and invalidate Cloudfront distribution'
+          caches:
+            - node 
+          script:
+            - npm install -g npm@next @vue/cli
+            - npm install
+            - CI=false npm run build
+            - pipe: atlassian/aws-s3-deploy:0.5.0
+              variables:
+                S3_BUCKET: 'worksafe-beta'
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: '$AWS_DEFAULT_REGION'
+                LOCAL_PATH: 'dist'
+                ACL: 'bucket-owner-read'
+            - pipe: atlassian/aws-cloudfront-invalidate:0.6.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: '$AWS_DEFAULT_REGION'
+                DISTRIBUTION_ID: '$CLOUDFRONT_DISTRIBUTION_ID_PROD'
+    dev:
+       - step:
+          name: 'Setup'
+          caches:
+            - node
+          script:
+            - echo "Beginning Install..."
+            - npm install
+       - step:
+          name: 'Test'
+          caches:
+            - node
+          script:
+            - echo "Beginning Install..."
+            - npm install
+            # - echo "Beginning Tests...."
+            # - npm test
+       - step:
+          name: 'Security scan...'
+          script:
+            - echo "Your security scan goes here..."
+       - step:
+          name: 'Deploy to S3 and invalidate Cloudfront distribution'
+          caches:
+            - node 
+          script:
+            - npm install -g npm@next @vue/cli
+            - npm install
+            - CI=false npm run build-dev
+            - pipe: atlassian/aws-s3-deploy:0.5.0
+              variables:
+                S3_BUCKET: 'dev.worksafe-beta'
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: '$AWS_DEFAULT_REGION'
+                LOCAL_PATH: 'dist'
+                ACL: 'bucket-owner-read'            
+            - pipe: atlassian/aws-cloudfront-invalidate:0.6.0
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+                AWS_DEFAULT_REGION: '$AWS_DEFAULT_REGION'
+                DISTRIBUTION_ID: '$CLOUDFRONT_DISTRIBUTION_ID_DEV'
