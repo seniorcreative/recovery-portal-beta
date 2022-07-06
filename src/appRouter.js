@@ -44,9 +44,9 @@ async function getRoutes () {
   try {
     // Data needs to be retrieved in two parts - the content / navigation / data categories is from static JSON
     const axiosInstanceLocal = axios.create({
-      baseURL: ''
+      baseURL: 'https://recovery-portal-beta.herokuapp.com/'
     })
-    const resp = await axiosInstanceLocal.get(`/data/content.en.json`)
+    const resp = await axiosInstanceLocal.get('/data/content.en.json')
     contentData = resp.data
 
     // Dynamically add the routes if they are not existing and pass through their pages content
