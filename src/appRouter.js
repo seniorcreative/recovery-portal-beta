@@ -59,11 +59,11 @@ async function getRoutes () {
     }
 
      // Then the knowledge comes from CMS articles
-     const KNOWLEDGE_API = '/data/'
-     const knowledge = await axios.get(KNOWLEDGE_API);
+    //  const KNOWLEDGE_API = '/data/'
+    //  const knowledge = await axios.get(KNOWLEDGE_API);
      //const axiosInstance = axios.create()
      //const knowledge = await axiosInstance.get(`/content`)
-     contentData.knowledge = knowledge.data.data
+    //  contentData.knowledge = knowledge.data.data
 
      // Load and stash any stored personalisation before committing new content Store
      const contentGetter = store.getters['content/getContentData']()
