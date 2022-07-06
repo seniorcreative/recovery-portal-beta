@@ -59,7 +59,7 @@ async function getRoutes () {
     }
 
      // Then the knowledge comes from CMS articles
-     const KNOWLEDGE_API = 'https://xubx8si5f4.execute-api.ap-southeast-2.amazonaws.com/v1/content'
+     const KNOWLEDGE_API = '/data/'
      const knowledge = await axios.get(KNOWLEDGE_API);
      //const axiosInstance = axios.create()
      //const knowledge = await axiosInstance.get(`/content`)
