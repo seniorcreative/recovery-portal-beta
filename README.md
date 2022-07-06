@@ -2,14 +2,14 @@
 
 ## Requirements
 
-Global installation of and 
+Node v16
+
+Global installations 
+
 
 `npm i -g @vue/cli`
 `npm i -g node-sass@6.0.1`
 
-NPM v...
-
-
 ## Demo
 
-A demo of this applicatio
+A demo of this application is available at... 
