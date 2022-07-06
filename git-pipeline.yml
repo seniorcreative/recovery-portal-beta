@@ -1,0 +1,11 @@
+image: node:16-buster
+pipelines:
+  branches:
+    main:
+       - step:
+          name: 'Setup'
+          caches:
+            - node
+          script:
+            - echo "Beginning Install..."
+            - npm install
